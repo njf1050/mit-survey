@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIT Survey</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet"></head>
+
+<body>
+    <header>
+        <h1 id="title">MIT annual survey</h1>
+        <p id="description">thanks for helping us improve our system</p>
+    </header>
+    <main>
+        <form id="survey-form" action="" method="post">
+            <div id="personal-info">
+                <label id="name-label">Name:<input type="text" placeholder="Enter your name"></label>
+
+                <label id="email-label">E-mail:<input type="email" name="email" placeholder="example@email.com"></label>
+
+                <!-- no email-format validation error (user story #6) because lack of JS knowledge -->
+                <label id="number-label">age:<input type="number" min="18" max="200" placeholder="Age"></label>
+
+                <!-- no non-numbers validation error (user story #8) because lack of JS knowledge -->
+                <!-- no number-out-of-the-range validation error (user story #9) because lack of JS knowledge -->
+                <label>occupation:
+                    <select name="occupation">
+                        <option value="student">student</option>
+                        <option value="manager">manager</option>
+                        <option value="lecturer">lecturer</option>
+                        <option value="i-rather-not-say">i-rather-not-say</option>
+                    </select>
+                </label>
+            </div>
+            <div id="recommend-wrapper">
+                <p>would you suggest MIT to others?</p>
+
+                <label><input type="radio" name="recommend" value="definitly">definitly</label>
+                <label><input type="radio" name="recommend" value="not sure">not sure</label>
+                <label><input type="radio" name="recommend" value="never">never</label>
+            </div>
+            <p>what would you like to see improved?</p>
+
+            <div id="improve-wrapper">
+                <label><input type="checkbox" name="improve" id="" value="transportation">Transportation</label>
+                <label><input type="checkbox" name="improve" id="" value="education">Education</label>
+                <label><input type="checkbox" name="improve" id="" value="staff">Staff</label>
+                <label><input type="checkbox" name="improve" id="" value="website">Website</label>
+                <label><input type="checkbox" name="improve" id="" value="grading system">Grading System</label>
+            </div>
+
+            <label>Any other comment you would like to add?<textarea name="comment" id="" cols="30"
+                    rows="10"></textarea></label>
+            <input type="submit">
+        </form>
+    </main>
+</body>
+
+</html>
